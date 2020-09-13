@@ -1,0 +1,8 @@
+#left-panel {
+    background-image: url("https://maxoffsky.com/word/wp-content/uploads/2013/03/laravel_grey_1920x1080.jpg") !important;
+    height: 100vh;
+    width: 100vw;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
