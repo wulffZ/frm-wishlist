@@ -17,9 +17,10 @@ Route::post('/login', 'UserController@doLogin');
 Route::get('/register', 'UserController@indexRegister');
 Route::post('/register', 'UserController@doRegister');
 
+Route::get('/', 'HomeController@index');
+Route::get('/wishlists', 'WishlistController@index');
+
 Route::group(['middleware' => 'check.login'], function () {
-    Route::get('/', 'HomeController@index');
-    Route::get('/wishlists', 'WishlistController@index');
     Route::get('/mywishlist', 'WishlistController@mywishlistIndex');
 
     Route::get('/mywishlist/create', 'WishlistController@mywishlistCreateIndex');

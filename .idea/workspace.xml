@@ -20,13 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="39fe0bf4-c7c5-4aa2-99fc-0ac8ecee5b42" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/editbyid.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env.example" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/WishlistController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/WishlistController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/CheckLogin.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/CheckLogin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/delete.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/delete.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -177,6 +171,7 @@
       <workItem from="1599946443244" duration="4690000" />
       <workItem from="1599997375645" duration="4349000" />
       <workItem from="1600066919735" duration="6051000" />
+      <workItem from="1600635963435" duration="130000" />
     </task>
     <servers />
   </component>
@@ -193,6 +188,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1600075606011">
