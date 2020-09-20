@@ -47,8 +47,13 @@ class WishlistController extends Controller
 
     public function mywishlistEditIndex(Request $request) {
         $user_id = Auth::id();
-        $wishlist = Wishlist::where('user_id', $user_id)->latest()->first();
+        $wishlist = Wishlist::where('user_id', $user_id)->get();
         return view('edit', compact('wishlist'));
+    }
+
+    public function mywishlistEditById ($id) {
+        $wishlist = Wishlist::where('id', $id)->get();
+        return view('editbyid', compact('wishlist'));
     }
 
     public function mywishlistEditPost(Request $request) {
@@ -78,13 +83,12 @@ class WishlistController extends Controller
 
     public function mywishlistDeleteIndex(Request $request) {
         $user_id = Auth::id();
-        $wishlist = Wishlist::where('user_id', $user_id)->latest()->first();
+        $wishlist = Wishlist::where('user_id', $user_id)->get();
         return view('delete', compact('wishlist'));
     }
 
-    public function mywishlistDeletePost(Request $request) {
-        $user_id = Auth::id();
-        $wishlist = Wishlist::where('user_id', $user_id)->delete();
+    public function mywishlistDeleteById($id) {
+        $wishlist = Wishlist::where('id', $id)->delete();
         return redirect('/');
     }
 }

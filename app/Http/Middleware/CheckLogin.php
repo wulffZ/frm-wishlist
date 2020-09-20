@@ -17,7 +17,7 @@ class CheckLogin
     public function handle($request, Closure $next)
     {
         if(!Auth::check()) {
-            // gtfo N I B B A
+            // gtfoA
             return redirect('/login');
         }
         return $next($request);

@@ -28,6 +28,8 @@ Route::group(['middleware' => 'check.login'], function () {
     Route::get('/mywishlist/edit', 'WishlistController@mywishlistEditIndex');
     Route::post('/mywishlist/edit', 'WishlistController@mywishlistEditPost');
 
+    Route::get('/mywishlist/editbyid/{id}', 'WishlistController@mywishlistEditById');
+
     Route::get('/mywishlist/delete', 'WishlistController@mywishlistDeleteIndex');
-    Route::get('/mywishlist/deletecurrent', 'WishlistController@mywishlistDeletePost');
+    Route::get('/mywishlist/deletebyid/{id}', 'WishlistController@mywishlistDeleteById');
 });

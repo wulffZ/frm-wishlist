@@ -3,17 +3,21 @@
 @section('content')
 
     <div class="row">
-        <div class="col pt-4">
-            <div class="card dark-color-3">
-                <div class="card-body">
-                    <h5 class="card-title">{{ $wishlist->name }}</h5>
-                    <p class="card-text">{{ $wishlist->description }}</p>
-                    <img class="img-thumbnail" src="/storage/images/{{ $wishlist->thumbnail_name }}">
-                    <a href="{{ $wishlist->product_link }}" class="btn dark-color-1 button-fade--white">Product link</a>
+        <div class="col-sm-12">
+            <h1>Choose wishlist you want to delete</h1>
+        </div>
+        @foreach($wishlist as $item)
+            <div class="col-sm-6 pt-4">
+                <div class="card mb-3 dark-color-3">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ $item->name }}</h5>
+                        <p class="card-text">{{ $item->description }}</p>
+                        <img class="img w-50" src="/storage/images/{{ $item->thumbnail_name }}">
+                    </div>
+                    <a href="/mywishlist/deletebyid/{{ $item->id }}" class="btn btn-dark">Delete this wishlist</a>
                 </div>
             </div>
-            <a href="/mywishlist/deletecurrent" class="btn btn-dark btn-lg float-right mt-2 mb-2" type="submit">Delete</a>
-        </div>
+        @endforeach
     </div>
 
 
