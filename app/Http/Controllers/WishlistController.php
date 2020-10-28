@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\User;
 use App\Wishlist;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
@@ -47,6 +48,11 @@ class WishlistController extends Controller
 
     public function mywishlistEditIndex(Request $request) {
         $user_id = Auth::id();
+        $user = User::find($user_id);
+        if($user->role == "admin") {
+            $wishlist = Wishlist::all();
+            return view('edit', compact('wishlist'));
+        }
         $wishlist = Wishlist::where('user_id', $user_id)->get();
         return view('edit', compact('wishlist'));
     }
@@ -83,6 +89,11 @@ class WishlistController extends Controller
 
     public function mywishlistDeleteIndex(Request $request) {
         $user_id = Auth::id();
+        $user = User::find($user_id);
+        if($user->role == "admin") {
+            $wishlist = Wishlist::all();
+            return view('delete', compact('wishlist'));
+        }
         $wishlist = Wishlist::where('user_id', $user_id)->get();
         return view('delete', compact('wishlist'));
     }

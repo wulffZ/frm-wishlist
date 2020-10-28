@@ -77,4 +77,9 @@ class UserController extends Controller
         }
 
     }
+
+    public function doLogout(Request $request) {
+        Auth::logout();
+        return redirect('/login');
+    }
 }
